@@ -15,11 +15,15 @@ export default {
   },
 
   async created() {
+    console.log('MessageDisplay created')
     try {
       this.message = await getMessage()
     } catch (err) {
       this.error = 'err'
     }
+  },
+  mounted() {
+    console.log('MessageDisplay mounted')
   }
 }
 </script>
